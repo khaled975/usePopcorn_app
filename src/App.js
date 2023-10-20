@@ -61,7 +61,7 @@ export default function App() {
   // RETURN VALUE FROM FUNCTION AND SET IT TO setWatched STATE
   const [watched, setWatched] = useState(function () {
     const storedMovies = localStorage.getItem("watched");
-    return JSON.parse(storedMovies);
+    return JSON.parse(storedMovies) || [];
   });
 
   // FETCH MOVIES USING useFetch
